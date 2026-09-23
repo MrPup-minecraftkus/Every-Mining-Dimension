@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[64,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="everyminingdimension"
+version="3.0.0"
+displayName="Every Mining Dimension"
+logoFile="icon.png"
+authors="MrPup(minecraftkus)"
+
+description='''
+Adds three new dimensions, dig, dig and dig some more!
+'''
+
+[[dependencies.everyminingdimension]]
+    modId="forge"
+    mandatory=true
+    versionRange="[62,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.everyminingdimension]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[26.1, 26.3]"
+    ordering="NONE"
+    side="BOTH"
