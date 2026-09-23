@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "everyminingdimension:block/teleport_end_mining_dimension"
+  }
+}

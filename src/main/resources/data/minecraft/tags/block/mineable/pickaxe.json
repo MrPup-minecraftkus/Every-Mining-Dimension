@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "everyminingdimension:teleport_overworld_mining_dimension",
+    "everyminingdimension:teleport_nether_mining_dimension",
+    "everyminingdimension:teleport_end_mining_dimension"
+  ]
+}

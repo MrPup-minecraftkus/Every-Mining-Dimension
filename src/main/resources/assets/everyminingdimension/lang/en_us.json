@@ -1,0 +1,12 @@
+{
+  "block.everyminingdimension.teleport_nether_mining_dimension": "Teleport Nether Mining Dimension",
+  "block.everyminingdimension.teleport_end_mining_dimension": "Teleport End Mining Dimension",
+  "block.everyminingdimension.teleport_overworld_mining_dimension": "Teleport Overworld Mining Dimension",
+  "biome.everyminingdimension.overworldmining": "Overworld Mining",
+  "biome.everyminingdimension.endmining": "End Mining",
+  "biome.everyminingdimension.nethermining": "Nether Mining",
+  "itemGroup.every_mining_dimension": "Every Mining Dimension",
+  "item.everyminingdimension.teleport_nether_mining_dimension": "Teleport Nether Mining Dimension",
+  "item.everyminingdimension.teleport_end_mining_dimension": "Teleport End Mining Dimension",
+  "item.everyminingdimension.teleport_overworld_mining_dimension": "Teleport Overworld Mining Dimension"
+}

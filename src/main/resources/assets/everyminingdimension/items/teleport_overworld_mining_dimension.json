@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "everyminingdimension:block/teleport_overworld_mining_dimension"
+  }
+}

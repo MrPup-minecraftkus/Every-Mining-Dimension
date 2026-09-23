@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "everyminingdimension:block/nether_portal",
+    "up": "everyminingdimension:block/up_nether_portal",
+    "north": "everyminingdimension:block/nether_portal",
+    "east": "everyminingdimension:block/nether_portal",
+    "south": "everyminingdimension:block/nether_portal",
+    "west": "everyminingdimension:block/nether_portal",
+    "particle": "everyminingdimension:block/nether_portal"
+  },
+  "render_type": "solid"
+}
