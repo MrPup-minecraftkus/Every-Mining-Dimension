@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:stone"
+    },
+    "b": {
+      "item": "minecraft:coal"
+    },
+    "c": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "d": {
+      "item": "minecraft:ender_pearl"
+    },
+    "e": {
+      "item": "minecraft:diamond_pickaxe"
+    }
+  },
+  "result": {
+    "id": "everyminingdimension:teleport_overworld_mining_dimension",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:netherrack"
+    },
+    "b": {
+      "item": "minecraft:quartz"
+    },
+    "c": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "d": {
+      "item": "minecraft:ender_pearl"
+    },
+    "e": {
+      "item": "minecraft:diamond_pickaxe"
+    }
+  },
+  "result": {
+    "id": "everyminingdimension:teleport_nether_mining_dimension",
+    "count": 1
+  }
+}
