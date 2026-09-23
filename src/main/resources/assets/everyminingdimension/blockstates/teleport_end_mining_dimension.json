@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "everyminingdimension:block/teleport_end_mining_dimension"
+    }
+  }
+}

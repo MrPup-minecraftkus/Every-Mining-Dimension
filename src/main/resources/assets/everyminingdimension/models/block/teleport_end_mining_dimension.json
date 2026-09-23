@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "everyminingdimension:block/end_teleport",
+    "up": "everyminingdimension:block/up_end_teleport",
+    "north": "everyminingdimension:block/end_teleport",
+    "east": "everyminingdimension:block/end_teleport",
+    "south": "everyminingdimension:block/end_teleport",
+    "west": "everyminingdimension:block/end_teleport",
+    "particle": "everyminingdimension:block/end_teleport"
+  },
+  "render_type": "solid"
+}

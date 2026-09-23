@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "everyminingdimension",
+	"version": "${version}",
+	"name": "Every Mining Dimension",
+	"description": "Adds three new dimensions, dig, dig and dig some more!",
+	"authors": [
+		"MrPup(minecraftkus)"
+	],
+	"license": "All Rights Reserved",
+	"icon": "assets/everyminingdimension/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mrpup.everyminingdimension.EveryMiningDimension"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": ">=26.1 <=26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

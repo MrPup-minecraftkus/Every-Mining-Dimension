@@ -1,0 +1,34 @@
+{
+  "type": "everyminingdimension:overworld_mining_dimension_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:plains",
+      "lakes": false,
+      "features": true,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "minecraft:deepslate",
+          "height": 61
+        },
+        {
+          "block": "minecraft:stone",
+          "height": 61
+        },
+        {
+          "block": "minecraft:dirt",
+          "height": 4
+        },
+        {
+          "block": "minecraft:grass_block",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}

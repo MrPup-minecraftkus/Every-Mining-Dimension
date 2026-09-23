@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "aba"
+  ],
+  "key": {
+    "a": "minecraft:end_stone",
+    "b": "minecraft:ender_eye",
+    "c": "minecraft:diamond_pickaxe",
+    "d": "minecraft:ender_pearl"
+  },
+  "result": {
+    "id": "everyminingdimension:teleport_end_mining_dimension",
+    "count": 1
+  }
+}

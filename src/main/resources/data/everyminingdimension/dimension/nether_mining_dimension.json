@@ -1,0 +1,22 @@
+{
+  "type": "everyminingdimension:nether_mining_dimension_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:nether_wastes",
+      "lakes": false,
+      "features": true,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "minecraft:netherrack",
+          "height": 63
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}

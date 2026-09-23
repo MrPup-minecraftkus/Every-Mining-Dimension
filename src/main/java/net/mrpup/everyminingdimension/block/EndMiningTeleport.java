@@ -1,0 +1,73 @@
+package net.mrpup.everyminingdimension.block;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.portal.TeleportTransition;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
+import net.mrpup.everyminingdimension.EveryMiningDimension;
+import net.mrpup.everyminingdimension.data.ModAttachments;
+
+public class EndMiningTeleport extends Block {
+
+    public EndMiningTeleport(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (level.isClientSide()) return InteractionResult.PASS;
+
+        ServerLevel serverLevel = (ServerLevel) level;
+
+        ResourceKey<Level> overworldKey = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath("minecraft", "overworld"));
+        ResourceKey<Level> miningKey = ResourceKey.create(Registries.DIMENSION, Identifier.fromNamespaceAndPath(EveryMiningDimension.MOD_ID, "end_mining_dimension"));
+
+        if (level.dimension().equals(overworldKey)) {
+            return teleportPlayer(player, serverLevel, miningKey, pos);
+        } else if (level.dimension().equals(miningKey)) {
+            return teleportPlayer(player, serverLevel, overworldKey, pos);
+        }
+
+        return InteractionResult.PASS;
+    }
+
+    private InteractionResult teleportPlayer(Player player, ServerLevel currentWorld, ResourceKey<Level> targetKey, BlockPos fromPos) {
+        ServerLevel targetWorld = currentWorld.getServer().getLevel(targetKey);
+        if (targetWorld == null) return InteractionResult.FAIL;
+
+        BlockPos finalPos;
+        if (targetKey.identifier().equals(Identifier.fromNamespaceAndPath(EveryMiningDimension.MOD_ID, "end_mining_dimension"))) {
+            finalPos = new BlockPos(fromPos.getX(), 64, fromPos.getZ());
+            targetWorld.setBlock(finalPos, this.defaultBlockState(), 3);
+            player.setAttached(ModAttachments.OVERWORLD_PORTAL_POS, fromPos.asLong());
+        } else {
+            Long saved = player.getAttached(ModAttachments.OVERWORLD_PORTAL_POS);
+            finalPos = saved != null ? BlockPos.of(saved) : player.blockPosition();
+        }
+
+        final Vec3 vecPos = new Vec3(finalPos.getX() + 0.5, finalPos.getY(), finalPos.getZ() + 0.5);
+
+        TeleportTransition transition = new TeleportTransition(
+                targetWorld,
+                vecPos,
+                player.getDeltaMovement(),
+                player.getYRot(),
+                player.getXRot(),
+                TeleportTransition.DO_NOTHING
+        );
+
+        player.teleport(transition);
+
+
+        return InteractionResult.SUCCESS;
+    }
+}
