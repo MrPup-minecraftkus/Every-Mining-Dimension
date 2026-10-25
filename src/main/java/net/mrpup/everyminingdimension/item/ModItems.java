@@ -6,7 +6,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.mrpup.everyminingdimension.EveryMiningDimension;
 import net.mrpup.everyminingdimension.block.ModBlocks;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -25,8 +24,4 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> TELEPORT_END_MINING_DIMENSION = ITEMS.register(
             "teleport_end_mining_dimension", id -> new BlockItem(ModBlocks.TELEPORT_END_MINING_DIMENSION.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)))
     );
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
 }

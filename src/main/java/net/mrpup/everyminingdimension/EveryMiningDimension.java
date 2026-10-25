@@ -29,7 +29,7 @@ public class EveryMiningDimension {
         CreativeModTab.register(modEventBus);
         ModDimensions.register(modEventBus);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, ModMonsterConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SYNCED, ModMonsterConfig.SPEC);
 
         NeoForge.EVENT_BUS.register(this);
     }
@@ -39,6 +39,10 @@ public class EveryMiningDimension {
 
         Level world = event.getLevel();
         ResourceKey<Level> dimension = world.dimension();
+
+        if (world.isClientSide()) {
+            return;
+        }
 
         if (event.getEntity() instanceof Enemy) {
             if (!ModMonsterConfig.SPAWN_MONSTER.get()) {

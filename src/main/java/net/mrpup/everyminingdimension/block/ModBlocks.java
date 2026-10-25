@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.mrpup.everyminingdimension.EveryMiningDimension;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -37,8 +36,4 @@ public class ModBlocks {
                                     .strength(2f)
                                     .requiresCorrectToolForDrops()
                                     .setId(ResourceKey.create(Registries.BLOCK, id))));
-
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
 }
